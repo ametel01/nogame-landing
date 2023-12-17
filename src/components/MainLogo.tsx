@@ -6,12 +6,14 @@ const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0; // Adjust margins as needed
+  margin: 64px 0; // Adjust margins as needed
 `;
 
 const LogoImage = styled.img`
   max-width: 800px;
-  height: auto; // Ensures the logo is responsive
+  height: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
   @media (max-width: 768px) {
     // Adjust size for mobile devices
     max-width: 70%;
