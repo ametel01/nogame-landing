@@ -8,6 +8,9 @@ const theme = createTheme({
     secondary: {
       main: "#17a2b8", // Customize secondary color
     },
+    background: {
+      default: "#151a1e", // Set the default background color
+    },
   },
 });
 
