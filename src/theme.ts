@@ -16,7 +16,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "'Orbitron', sans-serif",
+    fontFamily: "'Roboto', sans-serif",
     allVariants: {
       color: "#f8f8ff", // Apply the color to all text variants
     },
