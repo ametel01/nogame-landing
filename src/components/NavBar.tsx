@@ -39,16 +39,16 @@ const NavBar: React.FC = () => {
       <Logo src={roundLogo} alt="Game Logo" />
       <IconLinks>
         <IconLink href="https://github.com/ametel01">
-          <FaGithub size="28px" />
+          <FaGithub size="24px" />
         </IconLink>
         <IconLink href="https://discord.gg/4ZBS3DMTJe">
-          <FaDiscord size="28px" />
+          <FaDiscord size="24px" />
         </IconLink>
         <IconLink href="https://twitter.com/home">
-          <FaXTwitter size="28px" />
+          <FaXTwitter size="24px" />
         </IconLink>
         <IconLink href="https://t.me/+8MsJiKToDvdiMjY0">
-          <FaTelegram size="28px" />
+          <FaTelegram size="24px" />
         </IconLink>
       </IconLinks>
     </Nav>
