@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
-  color: #fff;
   text-align: center;
-  margin-top: 64px;
-  padding: 20px;
+  margin-top: auto; // Pushes the footer to the bottom
+  padding: 24px;
+  border-top: 1px solid #314049;
   font-size: 0.8em;
   opacity: 0.7;
+  background-color: #212a30;
 
   @media (max-width: 768px) {
     font-size: 0.7em;
@@ -23,7 +24,7 @@ const FooterContainer = styled.footer`
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      © {new Date().getFullYear()} Your NoGame. All rights reserved.
+      © {new Date().getFullYear()} NoGame. All rights reserved.
     </FooterContainer>
   );
 };

@@ -32,7 +32,7 @@ const StyledButton = styled(Button)`
 `;
 const MainnetButton = styled(StyledButton)`
   && {
-    background: #d10000; /* A bold red shade similar to the logo */
+    background: #cc2500; /* A bold red shade similar to the logo */
     color: #fff;
     font-weight: 600; /* Bolder font weight for better readability */
     &:hover {
@@ -43,11 +43,12 @@ const MainnetButton = styled(StyledButton)`
 
 const TestnetButton = styled(StyledButton)`
   && {
-    background: #007ea7; /* A complementary blue shade */
+    background: #006b8f; /* A complementary blue shade */
     color: #fff;
+
     font-weight: 600; /* Consistent font weight for both buttons */
     &:hover {
-      background: #005c7a; /* A darker blue for hover state */
+      background: #004d66; /* A darker blue for hover state */
     }
   }
 `;

@@ -8,7 +8,9 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center; // Add this line to vertically center the items
-  padding: 20px;
+  padding: 12px;
+  background-color: #212a30;
+  border-bottom: 1px solid #314049;
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
