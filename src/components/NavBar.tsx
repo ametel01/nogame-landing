@@ -16,7 +16,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.img`
-  height: 42px;
+  height: 40px;
 `;
 
 const IconLink = styled.a`
@@ -39,16 +39,16 @@ const NavBar: React.FC = () => {
       <Logo src={roundLogo} alt="Game Logo" />
       <IconLinks>
         <IconLink href="https://github.com/ametel01">
-          <FaGithub size="24px" />
+          <FaGithub size="28px" />
         </IconLink>
         <IconLink href="https://discord.gg/4ZBS3DMTJe">
-          <FaDiscord size="24px" />
+          <FaDiscord size="28px" />
         </IconLink>
         <IconLink href="https://twitter.com/home">
-          <FaXTwitter size="24px" />
+          <FaXTwitter size="28px" />
         </IconLink>
         <IconLink href="https://t.me/+8MsJiKToDvdiMjY0">
-          <FaTelegram size="24px" />
+          <FaTelegram size="28px" />
         </IconLink>
       </IconLinks>
     </Nav>
