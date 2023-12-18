@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import roundLogo from "../assets/logo-round.png";
+import roundLogo from "../assets/logo-main.png";
 import { FaGithub, FaDiscord, FaTelegram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -8,7 +8,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center; // Add this line to vertically center the items
-  padding: 24px;
+  padding: 20px;
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.img`
-  height: 60px;
+  height: 42px;
 `;
 
 const IconLink = styled.a`
@@ -39,16 +39,16 @@ const NavBar: React.FC = () => {
       <Logo src={roundLogo} alt="Game Logo" />
       <IconLinks>
         <IconLink href="https://github.com/ametel01">
-          <FaGithub size="30px" />
+          <FaGithub size="24px" />
         </IconLink>
         <IconLink href="https://discord.gg/4ZBS3DMTJe">
-          <FaDiscord size="30px" />
+          <FaDiscord size="24px" />
         </IconLink>
         <IconLink href="https://twitter.com/home">
-          <FaXTwitter size="30px" />
+          <FaXTwitter size="24px" />
         </IconLink>
         <IconLink href="https://t.me/+8MsJiKToDvdiMjY0">
-          <FaTelegram size="30px" />
+          <FaTelegram size="24px" />
         </IconLink>
       </IconLinks>
     </Nav>

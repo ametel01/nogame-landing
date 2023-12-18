@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
-  background-color: #151a1e; // Adjust to match your theme
   color: #fff;
   text-align: center;
+  margin-top: 64px;
   padding: 20px;
   font-size: 0.8em;
+  opacity: 0.7;
 
   @media (max-width: 768px) {
     font-size: 0.7em;
@@ -22,8 +23,7 @@ const FooterContainer = styled.footer`
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      © {new Date().getFullYear()} Your Game Title. All rights reserved.
-      {/* Additional content can be added here */}
+      © {new Date().getFullYear()} Your NoGame. All rights reserved.
     </FooterContainer>
   );
 };

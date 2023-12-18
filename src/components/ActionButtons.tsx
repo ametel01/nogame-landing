@@ -4,25 +4,50 @@ import styled from "styled-components";
 
 const ButtonsWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; // Align buttons to the start (left)
   gap: 20px; // Space between buttons
-  margin: 20px 0;
+  margin: 32px 0; // Space above the buttons
+  margin-left: 128px;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 `;
 
 const StyledButton = styled(Button)`
   && {
-    // Increase specificity for overriding MUI styles
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 5px;
-
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 3px 5px 2px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
     &:hover {
-      opacity: 0.8;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+`;
+const MainnetButton = styled(StyledButton)`
+  && {
+    background: #d10000; /* A bold red shade similar to the logo */
+    color: #fff;
+    font-weight: 600; /* Bolder font weight for better readability */
+    &:hover {
+      background: #a30000; /* A darker red for hover state */
+    }
+  }
+`;
+
+const TestnetButton = styled(StyledButton)`
+  && {
+    background: #007ea7; /* A complementary blue shade */
+    color: #fff;
+    font-weight: 600; /* Consistent font weight for both buttons */
+    &:hover {
+      background: #005c7a; /* A darker blue for hover state */
     }
   }
 `;
@@ -30,20 +55,12 @@ const StyledButton = styled(Button)`
 const ActionButtons: React.FC = () => {
   return (
     <ButtonsWrapper>
-      <StyledButton
-        variant="contained"
-        color="primary"
-        href="path-to-mainnet-app"
-      >
+      <MainnetButton href="path-to-mainnet-app">
         Launch Mainnet App
-      </StyledButton>
-      <StyledButton
-        variant="contained"
-        color="secondary"
-        href="path-to-testnet-app"
-      >
+      </MainnetButton>
+      <TestnetButton href="path-to-testnet-app">
         Launch Testnet App
-      </StyledButton>
+      </TestnetButton>
     </ButtonsWrapper>
   );
 };
