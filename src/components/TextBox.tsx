@@ -48,8 +48,8 @@ const TextBox: React.FC = () => {
           shapes the universe. Own planets as NFTs, trade resources as ERC20
           tokens, and engage in strategic battles for dominance.
         </GameDescription>
-      </BoxWrapper>
       <ActionButtons />
+      </BoxWrapper>
     </CenteredFlexContainer>
   );
 };

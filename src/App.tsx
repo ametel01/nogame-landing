@@ -25,9 +25,7 @@ const App: React.FC = () => {
       <MainLayout>
         <ContentWrapper>
           <NavBar />
-          {/* <MainLogo /> */}
           <TextBox />
-          {/* <ActionButtons /> */}
         </ContentWrapper>
         <Footer />
       </MainLayout>

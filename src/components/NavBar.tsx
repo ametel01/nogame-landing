@@ -18,7 +18,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.img`
-  height: 40px;
+  height: 48px;
 `;
 
 const IconLink = styled.a`
