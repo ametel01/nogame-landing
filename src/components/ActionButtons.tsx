@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
 import styled from "styled-components";
 import starknetLogo from "../assets/starknet/SN-Symbol-Gradient - On dark bg.svg";
 
@@ -30,30 +31,43 @@ const StyledButton = styled(Button)`
     }
   }
 `;
+
 const MainnetButton = styled(StyledButton)`
   && {
-    background: #cc2500; /* A bold red shade similar to the logo */
+    background: #a31e00; // A bold red shade similar to the logo
     color: #fff;
-    font-weight: 600; /* Bolder font weight for better readability */
+    font-weight: 600; // Bolder font weight for better readability
+
     &:hover {
-      background: #a30000; /* A darker red for hover state */
+      background: #7a1600; // A darker red for hover state
+    }
+
+    &.Mui-disabled {
+      background: #212a30 !important; // A muted red shade when disabled
+      color: #707070; // Greyed out text color
     }
   }
 `;
 
 const TestnetButton = styled(StyledButton)`
   && {
-    background: #006b8f; /* A complementary blue shade */
+    background: #006b8f; // A complementary blue shade
     color: #fff;
-    font-weight: 600; /* Consistent font weight for both buttons */
+    font-weight: 600; // Consistent font weight for both buttons
+
     &:hover {
-      background: #004d66; /* A darker blue for hover state */
+      background: #004d66; // A darker blue for hover state
+    }
+
+    &:disabled {
+      background: #003d54; // A muted blue shade when disabled
+      color: #bbb; // Greyed out text color
     }
   }
 `;
 
 const Logo = styled.img`
-  height: 30px; 
+  height: 30px;
   margin-right: 8px;
 
   @media (max-width: 480px) {
@@ -66,12 +80,16 @@ const ActionButtons: React.FC = () => {
   return (
     <>
       <ButtonsWrapper>
-        <MainnetButton disabled href="path-to-mainnet-app">
-        <Logo src={starknetLogo} alt="StarkNet Logo" />
-          Launch Mainnet App
-        </MainnetButton>
+        <Tooltip title="Mainnet Coming Q2 2024!" arrow>
+          <span>
+            <MainnetButton disabled href="path-to-mainnet-app">
+              <Logo src={starknetLogo} alt="StarkNet Logo" />
+              Launch Mainnet App
+            </MainnetButton>
+          </span>
+        </Tooltip>
         <TestnetButton href="https://www.app.testnet.no-game.xyz/">
-        <Logo src={starknetLogo} alt="StarkNet Logo" />
+          <Logo src={starknetLogo} alt="StarkNet Logo" />
           Launch Sepolia App
         </TestnetButton>
       </ButtonsWrapper>
