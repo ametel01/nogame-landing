@@ -59,7 +59,7 @@ const ActionButtons: React.FC = () => {
       <MainnetButton href="path-to-mainnet-app">
         Launch Mainnet App
       </MainnetButton>
-      <TestnetButton href="path-to-testnet-app">
+      <TestnetButton href="https://www.app.testnet.no-game.xyz/">
         Launch Testnet App
       </TestnetButton>
     </ButtonsWrapper>
