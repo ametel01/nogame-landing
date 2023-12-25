@@ -13,7 +13,7 @@ const CenteredFlexContainer = styled.div`
 const BoxWrapper = styled.div`
   text-align: left; // Align text to the left
   max-width: 800px; // Adjust width as needed to fit your content
-  margin-left: 128px;
+  margin-left: 64px;
   margin-top: 48px;
 `;
 
@@ -24,7 +24,7 @@ const CatchyPhrase = styled.h1`
   line-height: 1.1; // Tight line height
   letter-spacing: normal; // Adjust letter spacing as needed
   @media (max-width: 768px) {
-    font-size: 2.5em; // Further reduced font size for smaller screens
+    font-size: 2em; // Further reduced font size for smaller screens
   }
 `;
 

@@ -5,6 +5,7 @@ import theme from "./theme";
 import NavBar from "./components/NavBar";
 import TextBox from "./components/TextBox";
 import Footer from "./components/Footer";
+import backgroundImage from "./assets/bg-image.webp";
 
 const MainLayout = styled.div`
   display: flex;
@@ -18,11 +19,30 @@ const ContentWrapper = styled.main`
   // Rest of your styling...
 `;
 
+const BackgroundImageContainer = styled.div`
+  position: fixed; // Use fixed for background positioning relative to the viewport
+  right: 0; // Align to the right edge of the screen
+  top: 50%; // Vertically centered
+  transform: translateY(-50%) rotate(25deg); // Adjust vertical centering, tilt at 25 degrees
+  opacity: 0.5; // High opacity (0 is fully transparent, 1 is fully opaque)
+  background: url(${backgroundImage}) no-repeat center center; // No repeat, centered
+  background-size: contain; // Contain the image within the element without cropping
+  width: 40%; // Width of the image, adjust as needed
+  height: 40%; // Height of the image, adjust as needed
+  z-index: -1; // Ensure it stays in the background
+
+  // Hide the background image on phones and tablets
+  @media (max-width: 768px) {
+    display: none; // Hide on devices with width 768px or less
+  }
+`;
+
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <MainLayout>
+        <BackgroundImageContainer />
         <ContentWrapper>
           <NavBar />
           <TextBox />
