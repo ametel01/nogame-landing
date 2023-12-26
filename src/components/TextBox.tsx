@@ -32,13 +32,13 @@ const BoxWrapper = styled.div`
 
 const BackgroundImage = styled.div`
   display: none; // Initially hidden
-  width: 100%; // Full width
-  height: 200px; // Adjust height as needed
   background: url(${backgroundImage}) no-repeat center center; // Centered background image
   background-size: cover; 
   border-radius: 8px;
 
   @media (max-width: 768px) {
+    width: 100%; // Full width
+    height: 200px;
     display: block; // Display on small screens
   }
 `;

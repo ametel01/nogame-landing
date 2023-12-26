@@ -113,7 +113,7 @@ const NavBar: React.FC = () => {
       <IconLink href="https://discord.gg/4ZBS3DMTJe">
         <FaDiscord size="24px" />
       </IconLink>
-      <IconLink href="https://twitter.com/home">
+      <IconLink href="https://twitter.com/NoGameStarknet">
         <FaXTwitter size="24px" />
       </IconLink>
       <IconLink href="https://t.me/+8MsJiKToDvdiMjY0">
