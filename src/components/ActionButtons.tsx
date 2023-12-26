@@ -11,10 +11,10 @@ const ButtonsWrapper = styled.div`
   margin: 32px 0; // Space above the buttons
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 15px;
+    display: none; // Hide the buttons on screens smaller than 768px
   }
 `;
+
 
 const StyledButton = styled(Button)`
   && {

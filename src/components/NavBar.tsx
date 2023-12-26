@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
-import roundLogo from "../assets/logo-main.png";
+import logoMain from "../assets/logo-main.webp";
 import { FaBars } from "react-icons/fa";
 import { FaGithub, FaDiscord, FaTelegram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -23,21 +23,45 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.img`
-  height: 48px;
-`;
+height: 48px;
 
-const IconLink = styled.a`
-  color: #f8f8ff;
-  padding: 8px;
-  &:hover {
-    color: #ccc; // Adjust hover color as needed
-  }
+@media (max-width: 768px) {
+  height: 24px; // Smaller height for screens 768px or less
+}
 `;
 
 const IconLinks = styled.div`
   display: flex;
   gap: 10px;
-  align-items: center; // Add this line to ensure icons are also vertically centered
+  align-items: center; // Ensure icons are vertically centered
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack icons vertically on small screens
+    align-items: flex-start; // Align items to the start
+  }
+`;
+
+const IconLink = styled.a`
+  color: #f8f8ff;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: #ccc; // Adjust hover color as needed
+  }
+
+  @media (max-width: 768px) {
+    padding: 12px; // Increase padding for larger touch targets
+    font-size: 1.2em; // Increase font size for readability
+  }
+
+  svg {
+    @media (max-width: 768px) {
+      width: 30px; // Increase icon size on small screens
+      height: 30px;
+    }
+  }
 `;
 
 const Hamburger = styled(FaBars)`
@@ -45,6 +69,23 @@ const Hamburger = styled(FaBars)`
   cursor: pointer;
   @media (max-width: 768px) {
     display: block;
+  }
+`;
+
+const IconLinksDesktop = styled.div`
+  display: none; // Initially hidden
+
+  @media (min-width: 769px) {
+    display: flex; // Display on larger screens
+    gap: 10px;
+    align-items: center;
+  }
+`;
+
+const StyledDrawer = styled(Drawer)`
+  .MuiDrawer-paper {
+    background-color: #212a30; // Set the background color of the drawer
+    height: 100%; // Ensure the drawer takes the full height
   }
 `;
 
@@ -64,30 +105,33 @@ const NavBar: React.FC = () => {
       setIsDrawerOpen(open);
     };
 
+  const iconLinksContent = (
+    <IconLinks>
+      <IconLink href="https://github.com/ametel01">
+        <FaGithub size="24px" />
+      </IconLink>
+      <IconLink href="https://discord.gg/4ZBS3DMTJe">
+        <FaDiscord size="24px" />
+      </IconLink>
+      <IconLink href="https://twitter.com/home">
+        <FaXTwitter size="24px" />
+      </IconLink>
+      <IconLink href="https://t.me/+8MsJiKToDvdiMjY0">
+        <FaTelegram size="24px" />
+      </IconLink>
+    </IconLinks>
+  );
+
   return (
     <Nav>
-      <Logo src={roundLogo} alt="Game Logo" />
+      <Logo src={logoMain} alt="Game Logo" />
       <Hamburger size="24px" onClick={toggleDrawer(true)} />
-      <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
-        <IconLinks
-          onClick={toggleDrawer(false)}
-          onKeyDown={toggleDrawer(false)}
-        ></IconLinks>
-        <IconLinks>
-          <IconLink href="https://github.com/ametel01">
-            <FaGithub size="24px" />
-          </IconLink>
-          <IconLink href="https://discord.gg/4ZBS3DMTJe">
-            <FaDiscord size="24px" />
-          </IconLink>
-          <IconLink href="https://twitter.com/home">
-            <FaXTwitter size="24px" />
-          </IconLink>
-          <IconLink href="https://t.me/+8MsJiKToDvdiMjY0">
-            <FaTelegram size="24px" />
-          </IconLink>
-        </IconLinks>
-      </Drawer>
+      <StyledDrawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+        {iconLinksContent}
+      </StyledDrawer>
+      <IconLinksDesktop>
+        {iconLinksContent}
+      </IconLinksDesktop>
     </Nav>
   );
 };
