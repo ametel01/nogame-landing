@@ -38,7 +38,7 @@ const MainnetButton = styled(StyledButton)`
     font-weight: 600; // Bolder font weight for better readability
 
     &:hover {
-      background: #7a1600; // A darker red for hover state
+      background: #3e538e; // A darker red for hover state
     }
 
     &.Mui-disabled {
@@ -55,7 +55,7 @@ const TestnetButton = styled(StyledButton)`
     font-weight: 600; // Consistent font weight for both buttons
 
     &:hover {
-      background: #004d66; // A darker blue for hover state
+      background: #384b80; // A darker blue for hover state
     }
 
     &:disabled {
