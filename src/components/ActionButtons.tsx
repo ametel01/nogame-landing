@@ -15,7 +15,6 @@ const ButtonsWrapper = styled.div`
   }
 `;
 
-
 const StyledButton = styled(Button)`
   && {
     padding: 10px 20px;
@@ -43,7 +42,7 @@ const MainnetButton = styled(StyledButton)`
     }
 
     &.Mui-disabled {
-      background: #212a30 !important; // A muted red shade when disabled
+      background: #3b3f53 !important; // A muted red shade when disabled
       color: #707070; // Greyed out text color
     }
   }
@@ -51,7 +50,7 @@ const MainnetButton = styled(StyledButton)`
 
 const TestnetButton = styled(StyledButton)`
   && {
-    background: #006b8f; // A complementary blue shade
+    background: #4a63aa; // A complementary blue shade
     color: #fff;
     font-weight: 600; // Consistent font weight for both buttons
 
@@ -60,7 +59,7 @@ const TestnetButton = styled(StyledButton)`
     }
 
     &:disabled {
-      background: #003d54; // A muted blue shade when disabled
+      background: #3b3f53; // A muted blue shade when disabled
       color: #bbb; // Greyed out text color
     }
   }
