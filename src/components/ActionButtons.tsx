@@ -87,7 +87,7 @@ const ActionButtons: React.FC = () => {
             </MainnetButton>
           </span>
         </Tooltip>
-        <TestnetButton href="https://www.app.testnet.no-game.xyz/">
+        <TestnetButton href="https://www.app.testnet.no-game.xyz/" target="_blank">
           <Logo src={starknetLogo} alt="StarkNet Logo" />
           Launch Sepolia App
         </TestnetButton>
