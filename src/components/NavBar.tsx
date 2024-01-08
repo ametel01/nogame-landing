@@ -1,11 +1,13 @@
-import React from "react";
-import { useState } from "react";
-import styled from "styled-components";
-import logoMain from "../assets/logo-main.webp";
-import { FaBars } from "react-icons/fa";
-import { FaGithub, FaDiscord, FaTelegram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import Drawer from "@mui/material/Drawer";
+import React from 'react';
+import { useState } from 'react';
+import styled from 'styled-components';
+import logoMain from '../assets/logo-main.webp';
+import { FaBars } from 'react-icons/fa';
+import { FaGithub, FaDiscord, FaTelegram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import Drawer from '@mui/material/Drawer';
+import { Link } from 'react-router-dom';
+import ConnectWallet from './ConnectWallet';
 
 const Nav = styled.nav`
   display: flex;
@@ -23,11 +25,11 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.img`
-height: 48px;
+  height: 48px;
 
-@media (max-width: 768px) {
-  height: 24px; // Smaller height for screens 768px or less
-}
+  @media (max-width: 768px) {
+    height: 24px; // Smaller height for screens 768px or less
+  }
 `;
 
 const IconLinks = styled.div`
@@ -95,9 +97,9 @@ const NavBar: React.FC = () => {
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
+        event.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
       ) {
         return;
       }
@@ -119,19 +121,25 @@ const NavBar: React.FC = () => {
       <IconLink href="https://t.me/+8MsJiKToDvdiMjY0">
         <FaTelegram size="24px" />
       </IconLink>
+      <ConnectWallet />
     </IconLinks>
   );
 
   return (
     <Nav>
-      <Logo src={logoMain} alt="Game Logo" />
+      <Link to="/" style={{ display: 'flex' }}>
+        {' '}
+        <Logo src={logoMain} alt="Game Logo" />
+      </Link>
       <Hamburger size="24px" onClick={toggleDrawer(true)} />
-      <StyledDrawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+      <StyledDrawer
+        anchor="right"
+        open={isDrawerOpen}
+        onClose={toggleDrawer(false)}
+      >
         {iconLinksContent}
       </StyledDrawer>
-      <IconLinksDesktop>
-        {iconLinksContent}
-      </IconLinksDesktop>
+      <IconLinksDesktop>{iconLinksContent}</IconLinksDesktop>
     </Nav>
   );
 };

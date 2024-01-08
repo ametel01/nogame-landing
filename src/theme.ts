@@ -1,24 +1,24 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#28a745", // Customize primary color
+      main: '#28a745', // Customize primary color
     },
     secondary: {
-      main: "#279AF1", // Customize secondary color
+      main: '#279AF1', // Customize secondary color
     },
     background: {
-      default: "#151a1e",
+      default: '#151a1e',
     },
     text: {
-      primary: "#F4F3EE", // Main text color
+      primary: '#F4F3EE', // Main text color
     },
   },
   typography: {
     fontFamily: "'Roboto', sans-serif",
     allVariants: {
-      color: "#F4F3EE", // Apply the color to all text variants
+      color: '#F4F3EE', // Apply the color to all text variants
     },
   },
   breakpoints: {

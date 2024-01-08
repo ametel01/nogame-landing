@@ -1,11 +1,14 @@
-import React from "react";
-import { ThemeProvider, CssBaseline } from "@mui/material";
-import styled from "styled-components";
-import theme from "./theme";
-import NavBar from "./components/NavBar";
-import TextBox from "./components/TextBox";
-import Footer from "./components/Footer";
-import backgroundImage from "./assets/bg-image.webp";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import styled from 'styled-components';
+import theme from './theme';
+import NavBar from './components/NavBar';
+import TextBox from './components/TextBox';
+import Footer from './components/Footer';
+import backgroundImage from './assets/bg-image.webp';
+import ClaimPioneerNft from './pages/PioneersNft';
+import { StarknetProvider } from './components/StarknetProvider';
 
 const MainLayout = styled.div`
   display: flex;
@@ -39,17 +42,24 @@ const BackgroundImageContainer = styled.div`
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <MainLayout>
-        <BackgroundImageContainer />
-        <ContentWrapper>
-          <NavBar />
-          <TextBox />
-        </ContentWrapper>
-        <Footer />
-      </MainLayout>
-    </ThemeProvider>
+    <StarknetProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <MainLayout>
+          <BackgroundImageContainer />
+          <ContentWrapper>
+            <Router>
+              <NavBar />
+              <Routes>
+                <Route path="/" element={<TextBox />} />
+                <Route path="/pioneers" element={<ClaimPioneerNft />} />
+              </Routes>
+            </Router>
+          </ContentWrapper>
+          <Footer />
+        </MainLayout>
+      </ThemeProvider>
+    </StarknetProvider>
   );
 };
 

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import ActionButtons from "./ActionButtons";
-import backgroundImage from "../assets/bg-image.webp";
-import roundLogo from "../assets/logo-round.webp";
-import snSymbol from "../assets/starknet/SN-Symbol-Flat colour - On dark bg.svg";
+import React from 'react';
+import styled from 'styled-components';
+import ActionButtons from './ActionButtons';
+import backgroundImage from '../assets/bg-image.webp';
+import roundLogo from '../assets/logo3-removebg.png';
+import snSymbol from '../assets/starknet/SN-Symbol-Flat colour - On dark bg.svg';
 
 // Adjusted the container to not necessarily take up the full height
 const CenteredFlexContainer = styled.div`
@@ -33,7 +33,7 @@ const BoxWrapper = styled.div`
 const BackgroundImage = styled.div`
   display: none; // Initially hidden
   background: url(${backgroundImage}) no-repeat center center; // Centered background image
-  background-size: cover; 
+  background-size: cover;
   border-radius: 8px;
 
   @media (max-width: 768px) {
@@ -44,15 +44,15 @@ const BackgroundImage = styled.div`
 `;
 
 const CatchyPhrase = styled.h1`
-  font-size: 2.8em; 
-  font-weight: bold; 
-  text-transform: uppercase; 
-  line-height: 1.1; 
-  letter-spacing: normal; 
+  font-size: 2.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: normal;
 
   @media (max-width: 768px) {
     font-size: 2em;
-    margin-bottom: 48px; 
+    margin-bottom: 48px;
   }
 `;
 

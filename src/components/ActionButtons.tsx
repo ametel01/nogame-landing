@@ -1,8 +1,10 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import styled from "styled-components";
-import starknetLogo from "../assets/starknet/SN-Symbol-Gradient - On dark bg.svg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import styled from 'styled-components';
+import starknetLogo from '../assets/starknet/SN-Symbol-Gradient - On dark bg.svg';
+import nftLogo from '../assets/nft.png';
 
 const ButtonsWrapper = styled.div`
   display: flex;
@@ -38,7 +40,7 @@ const MainnetButton = styled(StyledButton)`
     font-weight: 600; // Bolder font weight for better readability
 
     &:hover {
-      background: #3e538e; // A darker red for hover state
+      background: #8f1a00; // A darker red for hover state
     }
 
     &.Mui-disabled {
@@ -48,14 +50,14 @@ const MainnetButton = styled(StyledButton)`
   }
 `;
 
-const TestnetButton = styled(StyledButton)`
+export const TestnetButton = styled(StyledButton)`
   && {
     background: #4a63aa; // A complementary blue shade
     color: #fff;
     font-weight: 600; // Consistent font weight for both buttons
 
     &:hover {
-      background: #384b80; // A darker blue for hover state
+      background: #445c9c; // A darker blue for hover state
     }
 
     &:disabled {
@@ -89,11 +91,17 @@ const ActionButtons: React.FC = () => {
         </Tooltip>
         <TestnetButton
           href="https://www.app.testnet.no-game.xyz/"
-          target="_blank"
+          // target="_blank"
         >
           <Logo src={starknetLogo} alt="StarkNet Logo" />
           Launch Sepolia App
         </TestnetButton>
+        <Link to="/pioneers" style={{ textDecoration: 'none' }}>
+          <MainnetButton>
+            <Logo src={nftLogo} alt="StarkNet Logo" />
+            Claim Pioneer NFT
+          </MainnetButton>
+        </Link>
       </ButtonsWrapper>
     </>
   );
