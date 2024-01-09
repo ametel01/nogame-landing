@@ -18,7 +18,7 @@ const Container = styled.div`
   align-items: left;
   margin-left: 20%;
   margin-top: 5%;
-  min-height: 100vh;
+  // min-height: 100vh;
   // background-color: #1a2025; // Example space theme color
 `;
 
@@ -32,7 +32,7 @@ const EligibilityInstructions = styled.div`
   ); // Semi-transparent background for depth
   border-left: 4px solid #4a63aa; // Adding a colored border for emphasis
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 1.1rem; // Slightly larger font size for better readability
   line-height: 1.5; // Improved line spacing
   width: 35rem;
