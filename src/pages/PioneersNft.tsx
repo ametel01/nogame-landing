@@ -17,14 +17,28 @@ const Container = styled.div`
   flex-direction: column;
   align-items: left;
   margin-left: 20%;
-  margin-top: 10%;
-  // min-height: 100vh;
+  margin-top: 5%;
+  min-height: 100vh;
   // background-color: #1a2025; // Example space theme color
 `;
 
-const Title = styled.h1`
+const EligibilityInstructions = styled.div`
   color: white;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); // Semi-transparent background for depth
+  border-left: 4px solid #4a63aa; // Adding a colored border for emphasis
+  padding: 1rem;
   margin-bottom: 2rem;
+  font-size: 1.1rem; // Slightly larger font size for better readability
+  line-height: 1.5; // Improved line spacing
+  width: 35rem;
+  border-radius: 8px; // Rounded corners
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  max-width: 80%;
 `;
 
 const Input = styled.input`
@@ -106,7 +120,12 @@ const ClaimPioneerNft: React.FC = () => {
   return (
     <StarknetProvider>
       <Container>
-        <Title>Mint Your NFT</Title>
+        <EligibilityInstructions>
+          To be eligible to mint the Pioneer NFT, you must play NoGame Sepolia
+          and gain at least 100 points. Once you achieve 100 points, proceed to
+          the in-game key generator to generate a key. Return to this page with
+          the key to mint your NFT.
+        </EligibilityInstructions>
         {isNotMainnet && (
           <Warning>Please connect to Mainnet to proceed.</Warning>
         )}
