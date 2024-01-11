@@ -122,7 +122,7 @@ const ClaimPioneerNft: React.FC = () => {
       <Container>
         <EligibilityInstructions>
           To be eligible to mint the Pioneer NFT, you must play NoGame Sepolia
-          and gain at least 100 points. Once you achieve 100 points, proceed to
+          and gain at least 300 points. Once you achieve 100 points, proceed to
           the in-game key generator to generate a key. Return to this page with
           the key to mint your NFT.
         </EligibilityInstructions>
